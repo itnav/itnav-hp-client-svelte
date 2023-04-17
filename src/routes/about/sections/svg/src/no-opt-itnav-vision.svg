@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="402.733" height="613.708" viewBox="0 0 402.733 613.708">
+  <g id="Group_54" data-name="Group 54" transform="translate(0 0)">
+    <path id="Path_28" data-name="Path 28" d="M108.658,221.978l-49.271,126.3L198.88,415.848l139.494-67.572L289.1,221.978l-90.223,43.7Z" transform="translate(2.486 9.291)" fill="#191a1a"/>
+    <path id="Path_29" data-name="Path 29" d="M196.717,0,111.053,219.586l85.665,41.5,85.665-41.5Z" transform="translate(4.648 -0.001)" fill="#191a1a"/>
+    <path id="Path_30" data-name="Path 30" d="M201.366,424.2,57.315,354.417,0,501.33l201.366,97.543L402.733,501.33,345.418,354.417Z" transform="translate(0 14.834)" fill="#191a1a"/>
+    <path id="Path_31" data-name="Path 31" d="M198.88,265.683l-90.223-43.7-49.271,126.3L198.88,415.848Z" transform="translate(2.486 9.291)" fill="#131414"/>
+    <path id="Path_32" data-name="Path 32" d="M196.717,0,111.053,219.586l85.665,41.5Z" transform="translate(4.648 -0.001)" fill="#131414"/>
+    <path id="Path_33" data-name="Path 33" d="M0,501.33l201.366,97.543V424.2L57.315,354.417Z" transform="translate(0 14.834)" fill="#131414"/>
+  </g>
+  <text id="活躍層" transform="translate(158.362 207.367)" fill="#fdfdfd" font-size="27" font-family="PingFangSC-Semibold, PingFang SC" font-weight="600" letter-spacing="0.1em"><tspan x="0" y="0">活躍層</tspan></text>
+  <text id="探求層" transform="translate(158.362 348.018)" fill="#fdfdfd" font-size="27" font-family="PingFangSC-Semibold, PingFang SC" font-weight="600" letter-spacing="0.1em"><tspan x="0" y="0">探求層</tspan></text>
+  <text id="きっかけ層" transform="translate(131.362 514.925)" fill="#fdfdfd" font-size="26" font-family="PingFangSC-Semibold, PingFang SC" font-weight="600" letter-spacing="0.1em"><tspan x="0" y="0">きっかけ層</tspan></text>
+</svg>

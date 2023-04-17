@@ -1,0 +1,17 @@
+{
+	"extends": "./tsconfig.json",
+	"references": [],
+	"include": [
+		".eslintrc.*",
+		".stylelintrc.*",
+		".prettierrc.*",
+		"sitemap.config.*",
+		"vite.config.*"
+	],
+	"exclude": ["node_modules"],
+	"compilerOptions": {
+		"composite": true,
+		"lib": ["ESNext"],
+		"types": ["node"]
+	}
+}

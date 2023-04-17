@@ -1,0 +1,16 @@
+$breakpoint: 1024px;
+
+// 1024px 以上の場合に適用
+@mixin pc {
+	@media screen and (min-width: $breakpoint) {
+		@content;
+	}
+}
+
+// 1023px 以下の場合に適用
+// モバイルファーストでスタイルを組みため、基本的には使わない
+@mixin mp {
+	@media screen and (max-width: ($breakpoint - 1)) {
+		@content;
+	}
+}

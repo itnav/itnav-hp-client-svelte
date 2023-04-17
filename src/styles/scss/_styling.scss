@@ -1,0 +1,18 @@
+@mixin disable-scrollbar() {
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+@mixin anchor-link-margin($px) {
+	padding-top: $px;
+	margin-top: -$px;
+}
+
+@mixin text-shadow($px, $color) {
+	text-shadow: $px $px 0 $color, (-$px) $px 0 $color, $px (-$px) 0 $color,
+		(-$px) (-$px) 0 $color;
+}

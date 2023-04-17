@@ -1,0 +1,135 @@
+@use 'sass:map';
+@use 'sass:meta';
+@use './extensions/list';
+@use './extensions/math';
+@use './extensions/string';
+@use './media-query' as *;
+@use './layout' as *;
+
+// stylelint-disable value-keyword-case
+$font-family-jp: 'Noto Sans JP';
+
+$font-family-en: 'Roboto';
+
+$font-family-mono: 'Roboto Mono';
+
+$font-family-sub: Helvetica Neue Light, Helvetica Neue, Helvetica, Arial,
+	Lucida Grande, sans-serif;
+
+$font-family-default: $font-family-jp, $font-family-en, $font-family-sub;
+// stylelint-enable value-keyword-case
+
+/**
+ * 画面幅に応じてフォントサイズを変更できるようにするサイズ値を取得する
+ *
+ * * @example - 画面幅が 1024px だったとき、24px になるような vw 単位のフォントサイズを設定する
+ * .example {
+ *   font-size: rpx(24px, 1024px);
+ * }
+ *
+ * * @example - 画面幅がモバイル用のデザイン幅（376px）だったとき、24px になるような vw 単位のフォントサイズを設定する
+ * .example {
+ *   * // 第３引数の値は小数点以下の桁数であり、デフォルトは 1
+ *   font-size: rpx(24px, mp, 2);
+ * }
+ */
+@function rpx($px, $width, $unit: vw, $decimal: 1) {
+	$width: design-width($width) or $width;
+
+	// css関数を使用していた場合、その関数の第２引数に代入された値を px として扱う
+	$calc-name: null;
+	$calc-args: null;
+	@if (meta.type-of($px) == calculation) {
+		$calc-name: meta.calc-name($px);
+		$calc-args: meta.calc-args($px);
+		$px: list.get($calc-args, 2);
+	}
+
+	$rpx: math.number($px) + 0px;
+
+	$vw: math.div($rpx, $width) * (100 + math.unit($unit));
+
+	@if $decimal > 0 {
+		$mag: 10 * $decimal;
+		$vw: math.div(math.round($vw * $mag), $mag);
+	}
+
+	@if $calc-name {
+		$calc-args: list.set-nth($calc-args, 2, $vw);
+		$vw: string.unquote('#{$calc-name}(#{$calc-args})');
+	}
+
+	@return $vw;
+}
+
+/**
+ * * @example
+ * .example {
+ *   @include rpx(24px, 1024px);
+ * }
+ * .example-2 {
+ *   @include rpx(clamp(24px, 36rpx, 42px), 1024px);
+ * }
+ * .example-3 {
+ *   @include rpx(clamp(24px, 36rpx, 42px), pc);
+ * }
+ * .example-4 {
+ *   @include rpx(clamp(24px, 36rpx, 42px), mp);
+ * }
+ *
+ * * @example
+ * .example {
+ *   @include rpx((
+ *     pc: 80px,
+ *     mp: 24px,
+ *   ));
+ * }
+ *
+ * * @example
+ * .example {
+ *   @include rpx((
+ *     pc: (80px, 1024px),
+ *     mp: (24px, 400px),
+ *   ));
+ * }
+ *
+ * * @examples
+ * .example {
+ *   @include rpx((
+ *     pc: min(14px, 80rpx),
+ *     mp: clamp(24px, 36rpx, 42px),
+ *   ));
+ * }
+ */
+@mixin rpx($px-or-params, $width: null) {
+	// 引数に map が渡された場合
+	@if meta.type-of($px-or-params) == map {
+		// PC 用のスタイリング
+		$param: map.get($px-or-params, pc);
+		@if $param {
+			$px: list.nth($param, 1);
+			$width: list.get($param, 2) or 'pc';
+
+			@include pc {
+				font-size: rpx($px, $width);
+			}
+		}
+
+		// モバイル用のスタイリング
+		// モバイルファーストで組んでいるため、`@include mp()` は使わずデフォルトでスタイリングする
+		$param: map.get($px-or-params, mp);
+		@if $param {
+			$px: list.nth($param, 1);
+			$width: list.get($param, 2) or 'mp';
+
+			font-size: rpx($px, $width);
+		}
+
+		// 引数に map が渡されなかった場合
+	} @else {
+		@if not $width {
+			@error 'Please specify a map for the first argument or number for the second argument of the rpx() mixin';
+		}
+		font-size: rpx($px-or-params, $width);
+	}
+}

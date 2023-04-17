@@ -1,0 +1,25 @@
+@use 'sass:map';
+
+$outer-padding-mp-x: 24px;
+$outer-padding-pc-left: 64px;
+$outer-padding-pc-right: $outer-padding-pc-left * 2;
+
+$inner-padding-mp-x: 24px;
+$inner-padding-pc-x: 0;
+
+// outer-padding + inner-padding
+$section-padding-mp-x: $outer-padding-mp-x + $inner-padding-mp-x;
+$section-padding-pc-left: $outer-padding-pc-left + $inner-padding-pc-x;
+$section-padding-pc-right: $outer-padding-pc-right + $inner-padding-pc-x;
+
+// デザインの幅
+$design-width-map: (
+	max: 1440px,
+	pc: 1280px,
+	mp: 360px,
+	min: 360px,
+) !default;
+
+@function design-width($key) {
+	@return map.get($design-width-map, $key);
+}

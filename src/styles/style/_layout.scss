@@ -1,0 +1,67 @@
+@use '../scss' as *;
+
+.app {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.app-page {
+	box-sizing: border-box;
+	height: 100%;
+}
+
+.app-page-padding-y {
+	box-sizing: border-box;
+	padding-top: 120px;
+	padding-bottom: 128px;
+}
+
+.app-outer-padding-x {
+	box-sizing: border-box;
+	padding-right: $outer-padding-mp-x;
+	padding-left: $outer-padding-mp-x;
+}
+
+.app-inner-padding-x {
+	box-sizing: border-box;
+	padding-right: $inner-padding-mp-x;
+	padding-left: $inner-padding-mp-x;
+}
+
+// outer-padding と inner-padding を合わせた空白を付与する
+.app-section-padding-x {
+	box-sizing: border-box;
+	padding-right: $section-padding-mp-x;
+	padding-left: $section-padding-mp-x;
+}
+
+.app-limit-design-max-width {
+	max-width: design-width(max);
+	margin-right: auto;
+	margin-left: auto;
+}
+
+@include pc {
+	.app-page-padding-y {
+		padding-top: 160px;
+		padding-bottom: 240px;
+	}
+
+	.app-outer-padding-x {
+		padding-right: $outer-padding-pc-right;
+		padding-left: $outer-padding-pc-left;
+	}
+
+	.app-inner-padding-x {
+		box-sizing: border-box;
+		padding-right: $inner-padding-pc-x;
+		padding-left: $inner-padding-pc-x;
+	}
+
+	.app-section-padding-x {
+		box-sizing: border-box;
+		padding-right: $section-padding-pc-right;
+		padding-left: $section-padding-pc-left;
+	}
+}

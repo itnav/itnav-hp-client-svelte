@@ -1,0 +1,19 @@
+@use 'sass:string';
+@forward 'sass:string';
+
+/**
+ * 文字列を置換する
+ */
+@function replace($string, $from, $to, $all: true) {
+	$index: string.index($string, $from);
+
+	@while $index != null {
+		$start: string.slice($string, 0, $index - 1);
+		$end: string.slice($string, $index + string.length($from));
+		$string: $start + $to + $end;
+
+		$index: if($all, string.index($string, $from), null);
+	}
+
+	@return $string;
+}

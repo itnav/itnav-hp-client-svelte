@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="80.000008"
+   height="26"
+   viewBox="0 0 80.000007 26"
+   version="1.1"
+   id="svg716"
+   sodipodi:docname="itnav-logo.svg"
+   inkscape:version="1.2.2 (b0a84865, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs720" />
+  <sodipodi:namedview
+     id="namedview718"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="7.6220147"
+     inkscape:cx="29.257356"
+     inkscape:cy="29.650953"
+     inkscape:window-width="1920"
+     inkscape:window-height="1052"
+     inkscape:window-x="1728"
+     inkscape:window-y="28"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg716" />
+  <rect
+     id="Rectangle_1"
+     data-name="Rectangle 1"
+     width="6.4000001"
+     height="3.7"
+     fill="#3e9f78"
+     x="32.200001"
+     y="15.6"
+     style="stroke-width:0.999987" />
+  <path
+     id="Path_3"
+     data-name="Path 3"
+     d="m 25.521723,0 v 25.999999 h 4.181582 V 17.075347 L 32.2,19.267256 l 1.721723,-3.7 -4.21344,-3.714683 V 0 Z"
+     fill="#1a1311"
+     sodipodi:nodetypes="ccccccccc"
+     style="stroke-width:0.999984" />
+  <path
+     id="Path_4"
+     data-name="Path 4"
+     d="M 48.849679,0 V 8.139171 L 41.4,8.1799312 v 3.6296198 h 7.450321 v 7.97 l -4.096437,3.63 2.961606,2.59045 5.33451,-4.69045 v 0 0 -9.5 h 7 v -3.67038 h -7 V 0 Z"
+     fill="#1a1311"
+     style="stroke-width:0.999994"
+     sodipodi:nodetypes="ccccccccccccccccc" />
+  <path
+     id="Path_5"
+     data-name="Path 5"
+     d="M 72.610101,0 H 61.26528 v 3.6943104 h 8.593023 V 19.776277 L 65.763969,23.38862 68.724915,26 74.040279,21.311475 v 0 0 V 0 Z"
+     fill="#1a1311"
+     style="stroke-width:0.999991" />
+  <rect
+     id="Rectangle_2"
+     data-name="Rectangle 2"
+     width="2"
+     height="4"
+     fill="#3e9f78"
+     x="75"
+     y="15.303762"
+     style="stroke-width:0.999995" />
+  <rect
+     id="Rectangle_3"
+     data-name="Rectangle 3"
+     width="2"
+     height="4"
+     fill="#3e9f78"
+     x="78"
+     y="15.303762"
+     style="stroke-width:0.999995" />
+  <path
+     id="Path_6"
+     data-name="Path 6"
+     d="M 17.290132,0 3.8452393,11.854982 H 0 v 3.692394 h 5.5771406 v 0 L 9.5717675,12.025579 V 26 H 13.754623 V 8.3370406 L 20.25,2.6080961 Z"
+     fill="#1a1311"
+     style="stroke-width:0.999994" />
+</svg>

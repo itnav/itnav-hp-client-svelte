@@ -1,0 +1,409 @@
+@use '../scss' as *;
+
+// 背景帯が黒のアニメーション
+.app-black-slide {
+	position: relative;
+	width: 100%;
+	max-width: -webkit-fit-content;
+	max-width: -moz-fit-content;
+	max-width: fit-content;
+	overflow: hidden;
+	&::before,
+	&::after {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+		content: '';
+		-webkit-animation-duration: 720ms;
+		animation-duration: 720ms;
+		-webkit-animation-timing-function: transition-timing-function(ease-out);
+		animation-timing-function: transition-timing-function(ease-out);
+		-webkit-animation-fill-mode: forwards;
+		animation-fill-mode: forwards;
+	}
+	&::before {
+		background-color: $white;
+		-webkit-animation-name: bg-black-slide-show-anime;
+		animation-name: bg-black-slide-show-anime;
+	}
+	&::after {
+		background-color: $black;
+		-webkit-animation-name: bg-slide-black-anime;
+		animation-name: bg-slide-black-anime;
+	}
+}
+@-webkit-keyframes bg-black-slide-show-anime {
+	0% {
+		transform: scaleX(1);
+		transform-origin: left;
+	}
+	48% {
+		transform: scaleX(1);
+		transform-origin: left;
+	}
+	50% {
+		transform-origin: right;
+	}
+	100% {
+		transform: scaleX(0);
+		transform-origin: right;
+	}
+}
+@keyframes bg-black-slide-show-anime {
+	0% {
+		transform: scaleX(1);
+		transform-origin: left;
+	}
+	48% {
+		transform: scaleX(1);
+		transform-origin: left;
+	}
+	50% {
+		transform-origin: right;
+	}
+	100% {
+		transform: scaleX(0);
+		transform-origin: right;
+	}
+}
+@-webkit-keyframes bg-slide-black-anime {
+	0% {
+		transform: scaleX(0);
+		transform-origin: left;
+	}
+	48% {
+		transform: scaleX(1);
+		transform-origin: left;
+	}
+	50% {
+		transform-origin: right;
+	}
+	100% {
+		transform: scaleX(0);
+		transform-origin: right;
+	}
+}
+@keyframes bg-slide-black-anime {
+	0% {
+		transform: scaleX(0);
+		transform-origin: left;
+	}
+	48% {
+		transform: scaleX(1);
+		transform-origin: left;
+	}
+	50% {
+		transform-origin: right;
+	}
+	100% {
+		transform: scaleX(0);
+		transform-origin: right;
+	}
+}
+
+// visibleクラスが付いてる時の背景帯が黒のアニメーション
+.visible .app-black-slide-scroll-animation {
+	position: relative;
+	width: 100%;
+	max-width: -webkit-fit-content;
+	max-width: -moz-fit-content;
+	max-width: fit-content;
+	overflow: hidden;
+	&::before,
+	&::after {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+		content: '';
+		-webkit-animation-duration: 780ms;
+		animation-duration: 780ms;
+		-webkit-animation-timing-function: transition-timing-function(ease-out);
+		animation-timing-function: transition-timing-function(ease-out);
+		-webkit-animation-fill-mode: forwards;
+		animation-fill-mode: forwards;
+	}
+	&::before {
+		background-color: $white;
+		-webkit-animation-name: bg-black-slide-show-anime;
+		animation-name: bg-black-slide-show-anime;
+	}
+	&::after {
+		background-color: $black;
+		-webkit-animation-name: bg-slide-black-anime;
+		animation-name: bg-slide-black-anime;
+	}
+}
+@-webkit-keyframes bg-black-slide-show-anime {
+	0% {
+		transform: scaleX(1);
+		transform-origin: left;
+	}
+	48% {
+		transform: scaleX(1);
+		transform-origin: left;
+	}
+	50% {
+		transform-origin: right;
+	}
+	100% {
+		transform: scaleX(0);
+		transform-origin: right;
+	}
+}
+@keyframes bg-black-slide-show-anime {
+	0% {
+		transform: scaleX(1);
+		transform-origin: left;
+	}
+	48% {
+		transform: scaleX(1);
+		transform-origin: left;
+	}
+	50% {
+		transform-origin: right;
+	}
+	100% {
+		transform: scaleX(0);
+		transform-origin: right;
+	}
+}
+@-webkit-keyframes bg-slide-black-anime {
+	0% {
+		transform: scaleX(0);
+		transform-origin: left;
+	}
+	48% {
+		transform: scaleX(1);
+		transform-origin: left;
+	}
+	50% {
+		transform-origin: right;
+	}
+	100% {
+		transform: scaleX(0);
+		transform-origin: right;
+	}
+}
+@keyframes bg-slide-black-anime {
+	0% {
+		transform: scaleX(0);
+		transform-origin: left;
+	}
+	48% {
+		transform: scaleX(1);
+		transform-origin: left;
+	}
+	50% {
+		transform-origin: right;
+	}
+	100% {
+		transform: scaleX(0);
+		transform-origin: right;
+	}
+}
+
+// 背景帯が白のアニメーション
+.slide-content .app-white-slide {
+	position: relative;
+	width: 100%;
+	max-width: -webkit-fit-content;
+	max-width: -moz-fit-content;
+	max-width: fit-content;
+	overflow: hidden;
+	&::before,
+	&::after {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+		content: '';
+		-webkit-animation-duration: 720ms;
+		animation-duration: 720ms;
+		-webkit-animation-timing-function: transition-timing-function(ease-out);
+		animation-timing-function: transition-timing-function(ease-out);
+		-webkit-animation-fill-mode: forwards;
+		animation-fill-mode: forwards;
+	}
+	&::before {
+		background-color: $black;
+		-webkit-animation-name: bg-white-slide-show-anime;
+		animation-name: bg-white-slide-show-anime;
+	}
+	&::after {
+		background-color: $white;
+		-webkit-animation-name: bg-slide-white-anime;
+		animation-name: bg-slide-white-anime;
+	}
+}
+@-webkit-keyframes bg-white-slide-show-anime {
+	0% {
+		transform: scaleX(1);
+		transform-origin: left;
+	}
+	48% {
+		transform: scaleX(1);
+		transform-origin: left;
+	}
+	50% {
+		transform-origin: right;
+	}
+	100% {
+		transform: scaleX(0);
+		transform-origin: right;
+	}
+}
+@keyframes bg-white-slide-show-anime {
+	0% {
+		transform: scaleX(1);
+		transform-origin: left;
+	}
+	48% {
+		transform: scaleX(1);
+		transform-origin: left;
+	}
+	50% {
+		transform-origin: right;
+	}
+	100% {
+		transform: scaleX(0);
+		transform-origin: right;
+	}
+}
+@-webkit-keyframes bg-slide-white-anime {
+	0% {
+		transform: scaleX(0);
+		transform-origin: left;
+	}
+	50% {
+		transform: scaleX(1);
+		transform-origin: left;
+	}
+	50.001% {
+		transform-origin: right;
+	}
+	100% {
+		transform: scaleX(0);
+		transform-origin: right;
+	}
+}
+@keyframes bg-slide-white-anime {
+	0% {
+		transform: scaleX(0);
+		transform-origin: left;
+	}
+	50% {
+		transform: scaleX(1);
+		transform-origin: left;
+	}
+	50.001% {
+		transform-origin: right;
+	}
+	100% {
+		transform: scaleX(0);
+		transform-origin: right;
+	}
+}
+
+// 画像スライドアニメーション
+.app-img-slide {
+	position: relative;
+	overflow: hidden;
+	&::before {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 1;
+		content: '';
+		background-color: #222;
+		-webkit-animation-name: bg-img-fade-anime;
+		animation-name: bg-img-fade-anime;
+		-webkit-animation-duration: 720ms;
+		animation-duration: 720ms;
+		-webkit-animation-fill-mode: forwards;
+		animation-fill-mode: forwards;
+	}
+}
+@-webkit-keyframes bg-img-fade-anime {
+	0% {
+		transform: scaleX(1);
+		transform-origin: left;
+	}
+	50% {
+		transform: scaleX(1);
+		transform-origin: left;
+	}
+	50.001% {
+		transform-origin: right;
+	}
+	100% {
+		transform: scaleX(0);
+		transform-origin: right;
+	}
+}
+@keyframes bg-img-fade-anime {
+	0% {
+		transform: scaleX(1);
+		transform-origin: left;
+	}
+	50% {
+		transform: scaleX(1);
+		transform-origin: left;
+	}
+	50.001% {
+		transform-origin: right;
+	}
+	100% {
+		transform: scaleX(0);
+		transform-origin: right;
+	}
+}
+
+@-webkit-keyframes r360 {
+	0% {
+		transform: rotate(0deg);
+	}
+	99.9%,
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes r360 {
+	0% {
+		transform: rotate(0deg);
+	}
+	99.9%,
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes r-r360 {
+	0% {
+		transform: rotate(0deg);
+	}
+	99.9%,
+	to {
+		transform: rotate(-360deg);
+	}
+}
+
+@keyframes r-r360 {
+	0% {
+		transform: rotate(0deg);
+	}
+	99.9%,
+	to {
+		transform: rotate(-360deg);
+	}
+}
