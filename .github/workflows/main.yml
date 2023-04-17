@@ -18,6 +18,8 @@ jobs:
         PRIVATE_KEY: ${{ secrets.CONOHA_VPS_PROD_KEY }}
         PORT: ${{ secrets.CONOHA_VPS_PROD_PORT }}
       run: |
+        pwd
+        ls
         cd ~/itnav-hp
         git pull
         pnpm build
