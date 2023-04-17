@@ -18,6 +18,7 @@ jobs:
         key: ${{ secrets.CONOHA_VPS_PROD_KEY }}
         port: ${{ secrets.CONOHA_VPS_PROD_PORT }}
         script: |
+          echo $CONOHA_VPS_PROD_ID
           cd ~/itnav-hp
           git pull
           pnpm build
