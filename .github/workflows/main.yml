@@ -11,14 +11,13 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
     - name: SSH and deploy
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.CONOHA_VPS_PROD_IP }}
-        username: ${{ secrets.CONOHA_VPS_PROD_USERNAME }}
-        key: ${{ secrets.CONOHA_VPS_PROD_KEY }}
-        port: ${{ secrets.CONOHA_VPS_PROD_PORT }}
-        script: |
-          echo $CONOHA_VPS_PROD_ID
-          cd ~/itnav-hp
-          git pull
-          pnpm build
+#       uses: appleboy/ssh-action@master
+      env:
+        HOST: ${{ secrets.CONOHA_VPS_PROD_IP }}
+        USERNAME: ${{ secrets.CONOHA_VPS_PROD_USERNAME }}
+        PRIVATE_KEY: ${{ secrets.CONOHA_VPS_PROD_KEY }}
+        PORT: ${{ secrets.CONOHA_VPS_PROD_PORT }}
+      run: |
+        cd ~/itnav-hp
+        git pull
+        pnpm build
