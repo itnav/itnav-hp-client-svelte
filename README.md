@@ -1,4 +1,4 @@
-# Itnav HP
+# Itnav HP（Svelte）
 
 ## Links
 
