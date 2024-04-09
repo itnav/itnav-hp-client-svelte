@@ -133,7 +133,7 @@
 		{
 			nickname: 'あーちゃん',
 			name: '渥美 優花',
-			role: '開発部',
+			role: 'BX事業部',
 			SVG: AChanSvg,
 		},
 		{
@@ -147,12 +147,6 @@
 			name: '佐々木 栞',
 			role: '開発部',
 			SVG: AshSvg,
-		},
-		{
-			nickname: 'Cap',
-			name: '北村 颯世',
-			role: '教育部 / 営業',
-			SVG: CapSvg,
 		},
 		{
 			nickname: 'ユーザ',
@@ -175,7 +169,7 @@
 		{
 			nickname: 'バンク',
 			name: '阿部 太一',
-			role: '教育部 / 営業',
+			role: '教育部 / BX事業部',
 			SVG: BankSvg,
 		},
 	] satisfies Readonly<Member[]>;
