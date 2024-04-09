@@ -2,7 +2,6 @@
 	import AChanSvg from './svg/AChanSvg.svelte';
 	import AshSvg from './svg/AshSvg.svelte';
 	import BankSvg from './svg/BankSvg.svelte';
-	import CapSvg from './svg/CapSvg.svelte';
 	import DanNeiSvg from './svg/DanNeiSvg.svelte';
 	import FuruyamaSvg from './svg/FuruyamaSvg.svelte';
 	import GakuSvg from './svg/Gaku.svelte';
